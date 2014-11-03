@@ -241,7 +241,7 @@ auth-tokens-create -S
 export TOKEN=c1abb7c8326c33483e4a8a39a918ed7
 ```
 
-Post your new service into your namespace
+Post your new service into your namespace. Because we are creating multiple APIs from a single repo, we must specify the path (relative to the root of the repo) where the metadata.yml file can be found. If this is ommitted, ADAMA looks at the root level. 
 
 ```
 curl -skL -XPOST -H "Authorization: Bearer $TOKEN" -F "git_repository=https://github.com/mwvaughn/data_api_examples.git" -F "metadata=generic" $API/$NS/services 
@@ -256,6 +256,8 @@ curl -skL -XPOST -H "Authorization: Bearer $TOKEN" -F "git_repository=https://gi
     }, 
     "status": "success"
 }
+```
+
 
 Verify that it loaded correctly by accessing *state_url*
 
