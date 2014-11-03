@@ -1,0 +1,10 @@
+--- 
+description: "Returns MapMan bin information for a given AGI locus identifier"
+main_module: generic/main.py
+name: mapman_bin_by_locus
+type: generic
+url: "http://www.gabipd.org/"
+version: 0.1
+whitelist: 
+  - www.gabipd.org
+  
